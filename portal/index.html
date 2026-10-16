@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiFi Self-Service</title>
+  <meta name="description" content="Chagua package, lipa kwa M-Pesa, anza kutumia internet mara moja na WiFi Self-Service hotspot.">
+  <meta property="og:title" content="WiFi Self-Service">
+  <meta property="og:description" content="Chagua package, lipa kwa M-Pesa, anza kutumia internet mara moja na WiFi Self-Service hotspot.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top bar for admin navigation -->
+  <div class="admin-bar">
+    <span>🌐 WiFi Hotspot Portal</span>
+    <a href="/admin" class="admin-link">⚙️ Dashboard ya Admin</a>
+  </div>
+
+  <div class="container">
+    <div class="logo">📶</div>
+    <h1>Karibu WiFi Yetu</h1>
+    <p class="subtitle">Chagua package, lipa kwa M-Pesa, anza kutumia internet</p>
+
+    <!-- Step 1: Chagua Package -->
+    <div id="step-package" class="step active">
+      <h2>1. Chagua Package</h2>
+      <div class="packages" id="packageList">
+        <!-- Inajazwa na JS -->
+      </div>
+      <button id="nextBtn" class="btn-primary" disabled>Endelea</button>
+    </div>
+
+    <!-- Step 2: Namba ya Simu -->
+    <div id="step-phone" class="step">
+      <h2>2. Weka Namba Yako ya M-Pesa</h2>
+      <input type="tel" id="phone" placeholder="07XXXXXXXX" maxlength="10">
+      <p class="hint">Utapokea prompt ya M-Pesa kwenye simu yako</p>
+      <button id="payBtn" class="btn-primary">Lipa Sasa</button>
+      <button class="btn-secondary" onclick="goBack()">Rudi</button>
+    </div>
+
+    <!-- Step 3: Inasubiri Malipo -->
+    <div id="step-waiting" class="step">
+      <div class="spinner"></div>
+      <h2>Inasubiri Malipo...</h2>
+      <p>Tafadhali weka PIN yako ya M-Pesa kwenye simu</p>
+      <p class="timer" id="timer">03:00</p>
+    </div>
+
+    <!-- Step 4: Imefanikiwa -->
+    <div id="step-success" class="step">
+      <div class="checkmark">✓</div>
+      <h2>Malipo Yamefanikiwa!</h2>
+      <p id="successMsg"></p>
+      <p class="small">Unaweza kuanza kutumia internet sasa</p>
+    </div>
+
+    <!-- Step 5: Imeshindikana -->
+    <div id="step-failed" class="step">
+      <div class="xmark">✕</div>
+      <h2>Malipo Hayakufanikiwa</h2>
+      <p id="failMsg"></p>
+      <button class="btn-primary" onclick="location.reload()">Jaribu Tena</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

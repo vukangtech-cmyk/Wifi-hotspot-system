@@ -1,0 +1,8 @@
+{
+  "name": "WiFi Self-Service",
+  "description": "Chagua package, lipa kwa M-Pesa, anza kutumia internet mara moja na WiFi Self-Service hotspot.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

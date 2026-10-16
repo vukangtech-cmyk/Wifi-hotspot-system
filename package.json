@@ -1,0 +1,16 @@
+{
+  "name": "wifi-hotspot-system",
+  "version": "1.0.0",
+  "description": "WiFi Hotspot & Payment Billing System",
+  "type": "module",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "build": "node -e \"console.log('Build OK')\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
